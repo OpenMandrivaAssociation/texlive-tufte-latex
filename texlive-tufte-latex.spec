@@ -1,12 +1,12 @@
-# revision 23722
+# revision 24733
 # category Package
 # catalog-ctan /macros/latex/contrib/tufte-latex
-# catalog-date 2009-12-12 09:30:50 +0100
+# catalog-date 2011-11-10 06:59:33 +0100
 # catalog-license apache2
 # catalog-version 3.5.0
 Name:		texlive-tufte-latex
 Version:	3.5.0
-Release:	1
+Release:	2
 Summary:	Document classes inspired by the work of Edward Tufte
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tufte-latex
@@ -23,27 +23,25 @@ Requires:	texlive-changepage
 Requires:	texlive-paralist
 Requires:	texlive-sauerj
 Requires:	texlive-placeins
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Provided are two classes inspired, respectively, by handouts
 and books created by Edward Tufte.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -52,8 +50,7 @@ and books created by Edward Tufte.
 %{_texmfdistdir}/tex/latex/tufte-latex/tufte-common.def
 %{_texmfdistdir}/tex/latex/tufte-latex/tufte-handout.cls
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/History.txt
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/Manifest.txt
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/README
+%doc %{_texmfdistdir}/doc/latex/tufte-latex/README.txt
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/be-contents.pdf
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/be-title.pdf
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/ei-contents.pdf
@@ -61,10 +58,13 @@ and books created by Edward Tufte.
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/helix.asy
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/helix.pdf
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/hilbertcurves.pdf
+%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/hilbertrecursive.tex
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/nasa_vision_sm.png
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/satir_graph.png
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/sine.asy
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/sine.pdf
+%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/sine2.asy
+%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/sine2.pdf
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/vdqi-contents.pdf
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/vdqi-title.pdf
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/ve-contents.pdf
