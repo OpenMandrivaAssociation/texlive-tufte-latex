@@ -28,16 +28,8 @@ Requires:	texlive-placeins
 Provided are two classes inspired, respectively, by handouts
 and books created by Edward Tufte.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -74,7 +66,6 @@ and books created by Edward Tufte.
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/sample-handout.bib
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/sample-handout.pdf
 %doc %{_texmfdistdir}/doc/latex/tufte-latex/sample-handout.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -85,5 +76,3 @@ and books created by Edward Tufte.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
