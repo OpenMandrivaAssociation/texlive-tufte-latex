@@ -76,3 +76,20 @@ and books created by Edward Tufte.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.5.0-3
++ Revision: 757154
+- Rebuild to reduce used resources
+
+* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.5.0-2
++ Revision: 739942
+- texlive-tufte-latex
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.5.0-1
++ Revision: 719813
+- texlive-tufte-latex
+- texlive-tufte-latex
+- texlive-tufte-latex
+
