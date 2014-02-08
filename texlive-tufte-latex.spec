@@ -6,7 +6,7 @@
 # catalog-version 3.5.0
 Name:		texlive-tufte-latex
 Version:	3.5.0
-Release:	3
+Release:	4
 Summary:	Document classes inspired by the work of Edward Tufte
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tufte-latex
