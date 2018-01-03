@@ -1,12 +1,6 @@
-# revision 24733
-# category Package
-# catalog-ctan /macros/latex/contrib/tufte-latex
-# catalog-date 2011-11-10 06:59:33 +0100
-# catalog-license apache2
-# catalog-version 3.5.0
 Name:		texlive-tufte-latex
-Version:	3.5.0
-Release:	11
+Version:	3.5.2
+Release:	1
 Summary:	Document classes inspired by the work of Edward Tufte
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tufte-latex
@@ -38,34 +32,8 @@ and books created by Edward Tufte.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/tufte-latex/tufte-book.cls
-%{_texmfdistdir}/tex/latex/tufte-latex/tufte-common.def
-%{_texmfdistdir}/tex/latex/tufte-latex/tufte-handout.cls
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/History.txt
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/README.txt
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/be-contents.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/be-title.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/ei-contents.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/ei-title.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/helix.asy
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/helix.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/hilbertcurves.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/hilbertrecursive.tex
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/nasa_vision_sm.png
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/satir_graph.png
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/sine.asy
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/sine.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/sine2.asy
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/sine2.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/vdqi-contents.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/vdqi-title.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/ve-contents.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/graphics/ve-title.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/sample-book.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/sample-book.tex
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/sample-handout.bib
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/sample-handout.pdf
-%doc %{_texmfdistdir}/doc/latex/tufte-latex/sample-handout.tex
+%{_texmfdistdir}/tex/latex/tufte-latex
+%doc %{_texmfdistdir}/doc/latex/tufte-latex
 
 #-----------------------------------------------------------------------
 %prep
@@ -76,20 +44,3 @@ and books created by Edward Tufte.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.5.0-3
-+ Revision: 757154
-- Rebuild to reduce used resources
-
-* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.5.0-2
-+ Revision: 739942
-- texlive-tufte-latex
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.5.0-1
-+ Revision: 719813
-- texlive-tufte-latex
-- texlive-tufte-latex
-- texlive-tufte-latex
-
