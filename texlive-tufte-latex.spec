@@ -1,6 +1,6 @@
 Name:		texlive-tufte-latex
 Version:	37649
-Release:	1
+Release:	2
 Summary:	Document classes inspired by the work of Edward Tufte
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tufte-latex
