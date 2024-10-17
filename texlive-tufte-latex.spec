@@ -3,7 +3,7 @@ Version:	37649
 Release:	2
 Summary:	Document classes inspired by the work of Edward Tufte
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tufte-latex
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tufte-latex
 License:	APACHE2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tufte-latex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tufte-latex.doc.r%{version}.tar.xz
