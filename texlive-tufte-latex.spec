@@ -1,46 +1,27 @@
-Name:		texlive-tufte-latex
-Version:	37649
-Release:	2
+%global tl_name tufte-latex
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	3.5.2
+Release:	%{tl_revision}.1
 Summary:	Document classes inspired by the work of Edward Tufte
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tufte-latex
-License:	APACHE2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tufte-latex.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tufte-latex.doc.r%{version}.tar.xz
+License:	apache2
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tufte-latex.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tufte-latex.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
-Requires:	texlive-xifthen
-Requires:	texlive-ifmtarg
-Requires:	texlive-changepage
-Requires:	texlive-paralist
-Requires:	texlive-sauerj
-Requires:	texlive-placeins
+BuildSystem:	texlive
+Requires:	texlive(changepage)
+Requires:	texlive(ifmtarg)
+Requires:	texlive(paralist)
+Requires:	texlive(placeins)
+Requires:	texlive(sauerj)
+Requires:	texlive(xifthen)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Provided are two classes inspired, respectively, by handouts
-and books created by Edward Tufte.
+Provided are two classes inspired, respectively, by handouts and books
+created by Edward Tufte.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/tufte-latex
-%doc %{_texmfdistdir}/doc/latex/tufte-latex
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
